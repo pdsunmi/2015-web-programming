@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>CLASS</title>
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="design.css"/>
+<style type="text/css">
+		#myDIV {background: #fff5ee; width:920px; height:530px; font-family: dotum;}
+		p {text-align:center; }
+		b {font-size: 15px;}
+		#map-canvas { width: 500px;  padding:100px;  align:center;
+						height: 20%; margin-left: 100px; }
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script type="text/javascript">
+
+	var zoomControl = 18;
+	var lat = 37.5214284;
+	var lng = 126.93230859999994;
+	
+	function initialize() {
+		var mapOptions = { zoom: zoomControl, //지도의 확대 비율을 지정한다.
+			center: new google.maps.LatLng(lat, lng) //현재의 위치 정보를 기준으로 한다. mygeoposition.com으로 위도 경도 설정!
+		};
+		
+		//현재 지도를 중심으로 구글 지도를 표시하도록 한다.
+		map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+</head>
+<body>
+	<div id ="myDIV">
+		<pre>
+		
+		
+		
+		<b>COOKING CLASS 안내♪</b>
+		
+		함께 요리를 배우고 해보는 홈쿠킹 클래스를 강좌를 개설합니다.
+		쿠킹 클래스의 주제는 '홈파티 요리' 입니다.
+		강좌는 시연과 식사로 이루어지면 약 2시간~3시간 정도 소요됩니다.
+	
+		클래스 문의 : 010-8975-5515
+		
+		클래스 장소 안내 : 서울시 영등포구 여의도동 한양아파트 E동 405호 <b>(아래 지도 참조)</b>	
+		</pre>
+		<div id="map-canvas"></div>
+	</div>
+</body>
+</html>

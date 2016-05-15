@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>COOKING RECIPE</title>
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="design.css"/>
+
+<script>
+	
+		
+		//세션 스토리지를 이용하여 방문횟수 증가시키는 함수
+		document.addEventListener("DOMContentLoaded", function() {
+			
+			var count = sessionStorage.getItem("homeCounter"); // 세션스토리지에서 homeCounter라는 키의 값을 가져옴
+			var btn = document.getElementById('btn');
+			
+			if (count == null) { // count가 널이라면
+				sessionStorage.setItem("homeCounter", 1); // 세션스토리지에 homeCounter라는 키의 1이라는 값을 생성
+				document.getElementById('visit').textContent = "1 "; 
+			} else { // count가 널이 아니라면
+				count++;
+				sessionStorage.setItem("homeCounter", count);
+				document.getElementById('visit').textContent = count; 
+			}
+		}, false);
+				
+
+
+		document.getElementById("memo").removeAttribute("disabled");
+		document.getElementById("memo").onclick = memoCanvas;
+		function memoCanvas() {
+		    dom = document.getElementsByName("display_area");
+		    dom[0].src = "memo_canvas.html";
+		}
+</script>
+
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<a id="logo" href="main.html">COOKING RECIPE</a>
+			<span class="right" style="padding: 30px 10px;">
+				<a href="login.html" target="display_area">LOGIN</a>
+				<a href="signup.html" target="display_area">SIGN UP</a>
+				<a>방문횟수 : <span id="visit"></span></a>
+			</span>
+			
+		</header>
+		<nav>
+			<ol> 
+				<li><a href="intro.html" target="display_area">INTRO</a></li>
+				<li><a href="recipe.html" target="display_area">RECIPE</a></li>
+				<li><a href="cooking.html" target="display_area">COOKING</a></li>
+				<li><a href="class.html" target="display_area">CLASS</a></li>
+			</ol>
+		</nav>
+		<hr/>
+		<section class="left">
+			<article class="left">
+				<iframe name="display_area" src="images/main.jpg" 
+				width="940px" height="540px"></iframe>
+			</article>
+		</section>
+		
+		<aside class="right">
+			<form><input type="button" id="memo" class="button" value="메모하기" disabled><br/>
+		</form></aside>
+		<hr/>
+		<footer>
+			<div id="copyright">
+				Copyright (c) 2015 YANG SUNMI All rights reserved
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

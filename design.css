@@ -1,0 +1,23 @@
+* { margin:0; padding:0;}
+.left { float: left;}
+.right { float: right;}
+.wrap { margin: 0; margin-right:auto; margin-left:auto; width:1100px; }
+#logo { text-align:center; font-weight: bold; font-size: 50px; text-decoration:none; 
+		letter-spacing:1px; color:#787878; height: 300px; line-height:300px;}
+hr { clear:both;}
+header { text-align:center;}
+a { color: pink; text-decoration: none;}
+nav { font-weight: bold; font-size:20px; letter-spacing:2px; color:#222; line-height:21px; width: 1100px;}
+nav ol { background:pink; padding :6px; list-style:none;}
+nav li { display:inline; margin :0 70px;}
+nav a { color: black; text-decoration:none; height:20px;}
+nav a:visited { color: #787878;}
+nav a:hover { color : white;}
+section { height:550px;}
+video { padding-left:210px; margin-top:30px;}
+#intro div {margin-top:50px;text-align: center;}
+.button { font-family : dotum; color: #666666; cursor:pointer; font-size:15px;
+		 border: 1px solid #dcdcdc; padding: 6px 24px; text-decoration: none;
+		 width: 150px; height: 50px; border-radius:6px;	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);}
+
+footer #copyright { margin: 5px 0 0 10px; float: right; font-family: consolas; height: 70px;}
